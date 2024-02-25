@@ -14,3 +14,5 @@ We'll be making API requests to three different services to solve this problem.
   2. Fetch the geo coordinates (Latitude & Longitude) for our IP.
 
   3. Fetch the next ISS flyovers for our geo coordinates.
+
+  4. Put it all together in one application
