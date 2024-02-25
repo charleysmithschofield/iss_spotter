@@ -29,3 +29,22 @@ fetchCoordsByIP('50.117.138.58', (error, coordinates) => {
   // If no error, log a message and the data (coordinates)
   console.log("It worked! Returned coordinates:", coordinates);
 });
+
+
+// Require fetchISSFlyOverTimes from iss.js file
+const { fetchISSFlyOverTimes } = require('./iss');
+
+// Define the coordinates that we previous got from the fetchCoordsByIP function
+const coordinates =  { latitude: 60.7211871, longitude: -135.0568449 };
+
+// Call fetchISSFlyOverTimes with the coordinated
+fetchISSFlyOverTimes(coordinates, (error, flyOverTimes) => {
+  // Check if there was an error
+  if (error) {
+    // log the error
+    console.log("Error fetching ISS fly over times:", error);
+    return;
+  }
+  // If there was no error, log the ISS fly over times
+  console.log("ISS fly over times:", flyOverTimes);
+});
